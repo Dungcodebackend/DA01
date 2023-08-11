@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    height: 70px;
+    background: red;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo{
+    padding-left: 40px;
+}
+#img{
+    width: 50px;
+    height: 50px;
+}
+.header__nav{
+    padding-right: 30px;
+}
+.button{
+    margin-right: 10px;
+    width: 130px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+section{
+    height: 670px;
+    background-image: url("../img/anh-dep-thien-nhien-3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 670px;
+}
+.formlogin{
+    height: 700px;
+    background-image: url("../img/anh-dep-thien-nhien-3.jpg");
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+}
+.login{
+    border: 2px double;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+}
+.login > form{
+    margin-left: 50px;
+}
+.login > h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+    padding:20px 0 40px 0;
+}
+form > p {
+    padding:12px 0 5px 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+input{
+    width: 490px;
+    height: 25px;
+}
+.submitlogin{
+    width: 100px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(60, 60, 245);
+    font-weight: 600;
+}
+.confirm{
+    width: 430px;
+    height: 25px;
+}
+.send{
+    margin-left: 3px;
+    width: 55px;
+    height: 30px;
+}
+.formregister{
+    height: 700px;
+    background-image: url("../img/anh-dep-thien-nhien-3.jpg");
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+}
+.register{
+    border: 2px double;
+    margin: auto;
+    width: 600px;
+    height: 660px;
+}
+.register > form{
+    margin-left: 50px;
+}
+.register > h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+    padding:20px 0 40px 0;
+    color: rgb(231, 70, 70);
+}
+input[type="checkbox"]{
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+.submitregister{
+    width: 100px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(242, 73, 73);
+    font-weight: 600;
+}
