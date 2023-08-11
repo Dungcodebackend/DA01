@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="49b3f246-6fba-47b7-abfe-6d87c6375efb" name="DA01" url="http://localhost/DN1_QuanLyCLB">
+        <fileTransfer mountedRoot="F:\dự án quản lý CLB\DN1_QuanLyCLB" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
