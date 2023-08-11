@@ -27,10 +27,10 @@ header{
     font-weight: 600;
 }
 section{
-    height: 670px;
+    height: 700px;
     background-image: url("../img/anh-dep-thien-nhien-3.jpg");
+    background-size: 100% 900px;
     background-repeat: no-repeat;
-    background-size: 100% 670px;
 }
 .formlogin{
     height: 700px;
