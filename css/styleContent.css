@@ -20,7 +20,7 @@ header{
 
 }
 #avarta{
-    background-image: url("");
+    background-image: url("#");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     margin-right: 10px;
@@ -52,4 +52,12 @@ nav > h3{
 }
 .fa-solid{
     float:right;
+}
+footer > p {
+    text-align: center;
+    margin: 0;
+}
+
+p > a{
+    color: rgb(89, 89, 240);
 }

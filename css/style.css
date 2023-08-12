@@ -86,7 +86,7 @@ input{
     background-image: url("../img/anh-dep-thien-nhien-3.jpg");
     background-size: 100% 900px;
     background-repeat: no-repeat;
-    padding-top: 120px;
+    padding-top: 20px;
 }
 .register{
     border: 2px double;
@@ -117,3 +117,7 @@ input[type="checkbox"]{
     background-color: rgb(242, 73, 73);
     font-weight: 600;
 }
+ span{
+     color: #f64747;
+     font-size: 12px;
+ }
