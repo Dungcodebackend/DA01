@@ -1,6 +1,4 @@
 <?php
-session_start();
-ob_start();
 $arr = [];
 if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
     $userName = $_POST['userName'];
@@ -20,6 +18,7 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
       $arr['username'] = false;
       $submit =1;
   }else{
+      $_SESSION["name"] = $userName;
       $arr['username'] = true;
   }
   if(!preg_match("/^[\d\w\-_\. ]+[\d\w]+$/u",$nameCLB)){
@@ -27,13 +26,15 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
       $submit =1;
   }
   else{
+      $_SESSION["nameDatabase"] = strtolower($nameCLB);
       $arr['nameCLB'] = true;
   }
-  if(!preg_match("/^[A-Z]+[\d]+$/",$codeCLB)){
+  if(!preg_match("/^[A-Z]+[\d]{4,8}$/",$codeCLB)){
       $arr['codeCLB'] = false;
       $submit =1;
   }
   else{
+      $_SESSION["codeDatabase"] = $codeCLB;
       $arr['codeCLB'] = true;
   }
 
@@ -42,6 +43,7 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
       $submit =1;
   }
   else{
+      $_SESSION["pass"] = $password;
       $arr['password'] = true;
   }
   if(!preg_match("~^(\+84)|0[\w]{9}$~",$phone)){
@@ -58,9 +60,9 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
   else{
       $arr['codePhone'] = true;
   }
-
-}else{
-
+  if($submit==0){
+      header("location: ./confige/startBb.php?act=create");
+  }
 }
 ?>
 <div class="formregister">
@@ -71,31 +73,31 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
             <input type="text" name="userName" class="">
             <?php
               if(isset($_POST['userName']))
-               echo $arr['username']? "":"<span class='error'>Lỗi :<br>- Không được bỏ trống<br>- Phải đủ 10 ký tự và không chứa ký tự đặc biệt</span>";
+               echo $arr['username']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Phải đủ 10 ký tự và không chứa ký tự đặc biệt</span>";
             ?>
             <p>Tên CLB :</p>
             <input type="text" name="nameCLB" class="">
             <?php
             if(isset($_POST['nameCLB']))
-                echo $arr['nameCLB']? "":"<span class='error'>Lỗi :<br>- Không được bỏ trống<br>- Không chứa ký tự đặc biệt trừ (-)<br>- Không được kết thúc bằng ký tự đặc biệt</span>";
+                echo $arr['nameCLB']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Không chứa ký tự đặc biệt trừ (-)<br>- Không được kết thúc bằng ký tự đặc biệt</span>";
             ?>
             <p>Tạo mã CLB :</p>
             <input type="text" name="codeCLB" class="">
             <?php
             if(isset($_POST['codeCLB']))
-                echo $arr['codeCLB']? "":"<span class='error'>Lỗi :<br>- Không được bỏ trống<br>- Viết bằng chữ in hoa và có số<br>- Kết thúc bằng chữ số</span>";
+                echo $arr['codeCLB']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Viết bằng chữ in hoa và có số<br>- Kết thúc bằng chữ số , độ đài tối đa 10 ký tự </span>";
             ?>
             <p>Mật khẩu :</p>
             <input type="password" name="password" class="">
             <?php
             if(isset($_POST['codeCLB']))
-                echo $arr['codeCLB']? "":"<span class='error'>Lỗi :<br>- Không được bỏ trống<br>- Có 2 chữ in hoa <br>- Có 2 chữ in thường<br>- Có 2 có chữ số<br>- Có chứa 1 ký tự đặc biệt<br>- Lớn hơn 8 ký tự</span>";
+                echo $arr['codeCLB']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Có 2 chữ in hoa <br>- Có 2 chữ in thường<br>- Có 2 có chữ số<br>- Có chứa 1 ký tự đặc biệt<br>- Lớn hơn 8 ký tự</span>";
             ?>
             <p>Số điện thoại :</p>
             <input type="number" name="phone" class="">
             <?php
             if(isset($_POST['phone']))
-                echo $arr['phone']? "":"<span class='error'>Lỗi :<br>- Phải là số</span>";
+                echo $arr['phone']? "":"<span class='error'><br>Lỗi :<br>- Phải là số</span>";
             ?>
             <p>Mã xác nhận:</p>
             <div style="height: 30px; display: flex;align-items: flex-end;">
@@ -104,7 +106,7 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
             </div>
             <?php
             if(isset($_POST['codePhone']))
-                echo $arr['codePhone']? "":"<span class='error'>Lỗi :<br>- Mã xác nhận không đúng</span>";
+                echo $arr['codePhone']? "":"<span class='error'><br>Lỗi :<br>- Mã xác nhận không đúng</span>";
             ?>
             <div style="padding-top: 2px;display: flex;align-items: center;">
                 <input type="checkbox" name="check" id="">
@@ -112,7 +114,7 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
             </div>
             <?php
             if(isset($arr['check']))
-                echo $arr['check']? "":"<span class='error'>Lỗi :<br>- Bạn chưa đồng ý với các điều khoản & dịch vụ</span>";
+                echo $arr['check']? "":"<span class='error'><br>Lỗi :<br>- Bạn chưa đồng ý với các điều khoản & dịch vụ</span>";
             ?>
             <p style="text-align: right;padding-right: 80px;margin-top: 20px;"><input type="submit" class="submitregister" value="ĐĂNG KÝ"></p>
         </form>

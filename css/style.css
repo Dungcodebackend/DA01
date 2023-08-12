@@ -82,9 +82,9 @@ input{
     height: 30px;
 }
 .formregister{
-    height: 700px;
+    height: 1200px;
     background-image: url("../img/anh-dep-thien-nhien-3.jpg");
-    background-size: 100% 900px;
+    background-size: 100% 1200px;
     background-repeat: no-repeat;
     padding-top: 20px;
 }
@@ -92,7 +92,7 @@ input{
     border: 2px double;
     margin: auto;
     width: 600px;
-    height: 660px;
+    padding-bottom: 20px;
 }
 .register > form{
     margin-left: 50px;
@@ -117,7 +117,20 @@ input[type="checkbox"]{
     background-color: rgb(242, 73, 73);
     font-weight: 600;
 }
- span{
-     color: #f64747;
-     font-size: 12px;
- }
+span{
+    color: #f64747;
+    font-size: 12px;
+}
+a > span{
+    text-decoration: none;
+}
+
+.win{
+    height: 550px;
+    background: rgb(162, 151, 151);
+}
+.win > p{
+    padding-top: 10px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

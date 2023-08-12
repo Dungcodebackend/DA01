@@ -1,4 +1,5 @@
 <?php
+session_start();
 ob_start();
 require_once "./view/header.php";
 if(isset($_GET['act']) && $_GET['act'] ){
@@ -12,6 +13,10 @@ switch ($act) {
     case 'register':
     {
         require_once "./view/register.php";
+        break;
+    }
+    case 'win':{
+        require_once "./view/win.php";
         break;
     }
     default:{
