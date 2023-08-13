@@ -34,6 +34,7 @@ header > div > a{
     color: white;
 }
 a{
+    color: white;
     text-decoration: none;
 }
 .Content{
@@ -48,6 +49,8 @@ nav > h3{
     text-align: center;
 }
 .nav__box{
+    background: rgb(60, 57, 57);
+    height: 25px;
     padding: 15px;
     margin: auto;
     padding-left: 10px;
@@ -65,6 +68,7 @@ p > a{
     color: rgb(89, 89, 240);
 }
 section{
+    border-top: 2px double;
     margin-left: 10px;
     width: 1292px;
     height: 650px;
@@ -108,4 +112,17 @@ th{
 }
 td{
     text-align: center;
+}
+td > a{
+    color: #5e5eee;
+    text-decoration: double;
+}
+.hover:hover .nav__menu{
+    display: block;
+}
+.nav__menu{
+    display: none;
+    top: -36px;
+    position: relative;
+    left: 206px;
 }

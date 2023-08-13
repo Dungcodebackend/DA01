@@ -21,15 +21,32 @@
     <nav>
         <h3>MENU</h3>
         <div class="nav__box">
-            <a href="">
+            <a href="./indexContent.php">
                 <span>Danh Sách Thành Viên </span>
                 <i class="fa-solid fa-angles-right"></i>
             </a>
         </div>
-        <div class="nav__box">
-            <a href="">
-                <span>Cập Nhật Thông Tin </span>
-                <i class="fa-solid fa-angles-right"></i>
-            </a>
+        <div class="nav__box hover">
+            <div class="nav__boxs">
+                <a href="">
+                    <span>Cập Nhật Thông Tin </span>
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+            <div class="nav__menu">
+                <div class="nav__box">
+                    <a href="./indexContent.php?act=delete">
+                        <span>Thêm hoặc Xóa </span>
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+                <div class="nav__box">
+                    <a href="./indexContent.php?act=update">
+                        <span>Cập Nhật Thông Tin </span>
+                        <i class="fa-solid fa-angles-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
+
     </nav>
