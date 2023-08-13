@@ -10,7 +10,7 @@ class database
            id VARCHAR(10) NOT NULL,
            hoVaTen VARCHAR(255) NOT NULL,
            gioiTinh CHAR(3) NOT NULL,
-           name DATE NOT NULL,
+           namSinh DATE NOT NULL,
            PRIMARY KEY (id)
           );";
         $conn->exec($sql);

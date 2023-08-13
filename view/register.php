@@ -73,7 +73,7 @@ if(!empty($_SERVER['REQUEST_METHOD']=="POST")){
             <input type="text" name="userName" class="">
             <?php
               if(isset($_POST['userName']))
-               echo $arr['username']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Phải đủ 10 ký tự và không chứa ký tự đặc biệt</span>";
+                  echo $arr['username']? "":"<span class='error'><br>Lỗi :<br>- Không được bỏ trống<br>- Phải đủ 10 ký tự và không chứa ký tự đặc biệt</span>";
             ?>
             <p>Tên CLB :</p>
             <input type="text" name="nameCLB" class="">

@@ -1,18 +1,19 @@
 body{
     margin: 0;
 }
-*{
-    box-sizing: border-box;
-}
+
 header{
     height: 70px;
     display: flex;
-    background: rgb(246, 235, 235);
+    background: rgb(63, 60, 60);
     justify-content: space-between;
     align-items: center;
 }
 .img__logo{
     padding-left: 20px;
+}
+footer{
+    margin-top: 10px;
 }
 #img{
     width: 50px;
@@ -28,6 +29,9 @@ header{
     width: 30px;
     height: 30px;
     background: red;
+}
+header > div > a{
+    color: white;
 }
 a{
     text-decoration: none;
@@ -47,7 +51,7 @@ nav > h3{
     padding: 15px;
     margin: auto;
     padding-left: 10px;
-    width: 213px;
+    width: 189px;
     border: 1px double;
 }
 .fa-solid{
@@ -57,7 +61,51 @@ footer > p {
     text-align: center;
     margin: 0;
 }
-
 p > a{
     color: rgb(89, 89, 240);
+}
+section{
+    margin-left: 10px;
+    width: 1292px;
+    height: 650px;
+    background: rgb(245, 243, 243);
+}
+h2{
+    text-align: center;
+    margin: 16px 0;
+}
+th{
+    width: 252px;
+}
+.search{
+    width: 300px;
+    height: 30px;
+    margin-left: 950px;
+    margin-bottom: 10px;
+}
+#search__search{
+    width: 250px;
+    height: 20px;
+}
+.fa-spin-reverse{
+    float: none;
+}
+.fa-magnifying-glass:before, .fa-search:before {
+    content: "\f002";
+    font-size: 18px;
+    color: white;
+}
+.search__buttom{
+    padding-top: 5px;
+    display: flex;
+    width: 40px;
+    height: 24px;
+    float: right;
+    align-items: center;
+    border: 1px double;
+    justify-content: space-around;
+    background: rgb(80, 80, 77);
+}
+td{
+    text-align: center;
 }
