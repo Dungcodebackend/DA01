@@ -22,6 +22,7 @@ class database
             chucVu VARCHAR(255) NOT NULL,
             diaChi VARCHAR(255),
             soDT CHAR(13),
+            email CHAR(100),
             id VARCHAR(10),
             CONSTRAINT fk_idThanhVien FOREIGN KEY (id) REFERENCES thanhvien(id)
           );";
